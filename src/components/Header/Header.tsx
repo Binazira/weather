@@ -5,7 +5,7 @@ import weatherLogo from "../../assets/icons/weatherLogo.svg";
 const Header = () => {
   return (
     <header className="header">
-      <div>
+      <div className="header__logo">
         <img src={weatherLogo} alt="weather-logo" />
       </div>
       <h2> WEATHER FORECAST</h2>

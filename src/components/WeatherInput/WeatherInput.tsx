@@ -6,14 +6,12 @@ import TextField from "@mui/material/TextField";
 
 interface WeatherInputProps {
   getWeather: (str: string) => void;
-  setCityName: (str: string) => void;
 }
 
-const WeatherInput = ({ getWeather, setCityName }: WeatherInputProps) => {
+const WeatherInput = ({ getWeather }: WeatherInputProps) => {
   const [input, setInput] = useState<string>("");
 
   function onSubmit() {
-    setCityName(input);
     getWeather(input);
   }
   return (

@@ -27,7 +27,7 @@ interface Location {
 
 const Weather = () => {
   const [dataWeather, setDataWeather] = useState<WeatherType>({});
-  const [cityName, setCityName] = useState<string>("");
+  // const [cityName, setCityName] = useState<string>("");
 
   async function getWeather(inputValue: string) {
     try {
@@ -40,8 +40,11 @@ const Weather = () => {
   }
   return (
     <div>
-      <WeatherInput getWeather={getWeather} setCityName={setCityName} />
-      <RenderWeather dataWeather={dataWeather} cityName={cityName} />
+      <WeatherInput getWeather={getWeather} />
+
+      {dataWeather?.current ? (
+        <RenderWeather dataWeather={dataWeather} />
+      ) : null}
     </div>
   );
 };

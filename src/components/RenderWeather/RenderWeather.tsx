@@ -7,10 +7,9 @@ import "./RenderWeather.scss";
 
 interface RenderWeatherProps {
   dataWeather: WeatherType;
-  cityName: string;
 }
 
-const RenderWeather = ({ dataWeather, cityName }: RenderWeatherProps) => {
+const RenderWeather = ({ dataWeather }: RenderWeatherProps) => {
   // console.log("RenderWeather", dataWeather);
   // console.log("RenderWeather", dataWeather.current?.temp_c);
   let temp = dataWeather.current?.temp_c;

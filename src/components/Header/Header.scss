@@ -1,4 +1,14 @@
 .header {
   background-color: rgb(65, 142, 231);
   width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    width: 100px;
+    #{img} {
+      width: 100%;
+    }
+  }
 }
